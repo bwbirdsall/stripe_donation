@@ -3,3 +3,4 @@
 
 <%= link_to "Edit #{@non_profit.name}", edit_non_profit_path(@non_profit), class: "btn btn-warning" %>
 <%= link_to "Delete #{@non_profit.name}", non_profit_path(@non_profit), class: "btn btn-primary", :data => {confirm: "You Sure, People Need You For Tax Breaks", method: "delete"} %>
+<%= link_to "Donate to This Non-Profit", new_non_profit_donation_path(@non_profit), class: "btn btn-info" %>

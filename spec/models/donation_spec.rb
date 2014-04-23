@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe NonProfit do
+describe Donation do
+  it { should belong_to :non_profit }
   it { should validate_presence_of :name }
-  it { should have_many :donations }
 end

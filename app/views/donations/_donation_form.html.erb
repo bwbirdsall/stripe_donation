@@ -1,0 +1,26 @@
+<%= form_for [@non_profit, @donation], :id => "new_donation" do |f| %>
+  <%= f.hidden_field :non_profit_id, value: @non_profit.id %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :amount, "Enter the Amount of Money you Want to Hide" %>
+    <%= f.number_field :amount, :step => 'any' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :card_number, "Credit Card Number " %>
+    <%= text_field_tag :card_number, nil, name: nil %>
+  </div>
+  <div class="form-group">
+      <%= label_tag :card_code, "Security Code on Card (CVV)" %>
+      <%= text_field_tag :card_code, nil, name: nil %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :card_month, "Card Expiration" %>
+    <%= select_month nil, {add_month_numbers_true: true}, {name: nil, id: "card_month"}%>
+    <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"}%>
+  </div>
+
+  <%= f.submit class: 'brn btn-danger' %>
+<% end %>
