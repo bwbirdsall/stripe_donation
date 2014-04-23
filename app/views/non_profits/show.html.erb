@@ -1,0 +1,5 @@
+<h1>Profile of: <%= @non_profit.name %></h1>
+<p><%= @non_profit.description %></p>
+
+<%= link_to "Edit #{@non_profit.name}", edit_non_profit_path(@non_profit), class: "btn btn-warning" %>
+<%= link_to "Delete #{@non_profit.name}", non_profit_path(@non_profit), class: "btn btn-primary", :data => {confirm: "You Sure, People Need You For Tax Breaks", method: "delete"} %>
