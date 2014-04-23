@@ -15,7 +15,7 @@ gem 'faker'
 gem 'smarter_csv'
 gem 'devise'
 gem 'textacular'
-
+gem 'stripe'
 
 group :development do
   gem 'better_errors'
